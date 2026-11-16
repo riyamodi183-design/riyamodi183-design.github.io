@@ -1562,3 +1562,382 @@ main.main > section {
 #hero h2 {
     margin-bottom: 10px;
 }
+```css
+/* =========================================
+   RIYA MODI - PERSONAL WEBSITE DESIGN
+   Modern AI / Technology Portfolio
+========================================= */
+
+/* Main colour palette */
+:root {
+  --background-color: #f7f8fc;
+  --default-color: #414b5c;
+  --heading-color: #172554;
+  --accent-color: #5865d8;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+
+/* General website */
+body {
+  background: #f7f8fc;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  color: #172554;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  padding: 85px 0;
+}
+
+/* Section headings */
+.section-title h2 {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.section-title p {
+  color: #718096;
+  font-size: 16px;
+}
+
+/* Navigation */
+.navmenu a {
+  background: #ffffff;
+  box-shadow: 0 3px 15px rgba(30, 41, 80, 0.06);
+  transition: all 0.3s ease;
+}
+
+.navmenu a:hover,
+.navmenu .active {
+  background: #5865d8;
+  color: white;
+}
+
+/* HERO SECTION */
+#hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(126, 135, 255, 0.22), transparent 30%),
+    radial-gradient(circle at 15% 85%, rgba(93, 173, 226, 0.15), transparent 30%),
+    linear-gradient(135deg, #101b40, #202d63 60%, #414d91);
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero h2 {
+  color: white;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  color: #dce4ff;
+  font-size: 23px;
+}
+
+#hero p span {
+  color: #aebaff;
+  border-bottom: 2px solid #aebaff;
+}
+
+#hero .social-links a {
+  color: white;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+#hero .social-links a:hover {
+  background: #7885ff;
+  transform: translateY(-4px);
+}
+
+/* ABOUT SECTION */
+.about .content {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 35px rgba(30, 41, 80, 0.06);
+}
+
+.about .content h2 {
+  color: #263779;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.about .content ul li {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(30, 41, 80, 0.15);
+}
+
+/* SKILLS SECTION */
+.skills {
+  background: #eef1fb;
+}
+
+.skills .progress {
+  margin-bottom: 20px;
+}
+
+.skills .progress .skill {
+  color: #263779;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.skills .progress-bar-wrap {
+  height: 10px;
+  border-radius: 20px;
+  background: #dce2f3;
+  overflow: hidden;
+}
+
+.skills .progress-bar {
+  height: 10px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #5865d8, #8c9aff);
+}
+
+/* RESUME SECTION */
+.resume .resume-title {
+  color: #3545a0;
+  font-size: 24px;
+}
+
+.resume .resume-item {
+  background: white;
+  padding: 22px 22px 22px 25px;
+  margin-bottom: 22px;
+  border-radius: 0 14px 14px 0;
+  box-shadow: 0 5px 25px rgba(30, 41, 80, 0.05);
+}
+
+.resume .resume-item h4 {
+  color: #293b80;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.resume .resume-item h5 {
+  background: #edf0ff;
+  color: #5865d8;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px;
+}
+
+/* PORTFOLIO SECTION */
+.portfolio {
+  background: #eef1fb;
+}
+
+.portfolio .portfolio-content {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(30, 41, 80, 0.07);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-content:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 35px rgba(30, 41, 80, 0.13);
+}
+
+.portfolio .portfolio-content img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background: #f3f4f8;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.portfolio .portfolio-content h4 {
+  color: #293b80;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.portfolio .portfolio-content p {
+  color: #718096;
+  font-size: 14px;
+}
+
+/* SERVICES SECTION */
+.services .service-item {
+  background: white;
+  border: 1px solid #edf0fa;
+  border-radius: 18px;
+  padding: 40px 25px;
+  box-shadow: 0 7px 25px rgba(30, 41, 80, 0.06);
+  transition: 0.3s;
+}
+
+.services .service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(88, 101, 216, 0.14);
+}
+
+.services .service-item .icon {
+  background: #eef0ff;
+  border-radius: 18px;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 20px;
+}
+
+.services .service-item .icon i {
+  font-size: 32px;
+  color: #5865d8;
+}
+
+.services .service-item h3 {
+  color: #263779;
+  font-size: 20px;
+}
+
+/* SERVICES TABLE */
+.services table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(30, 41, 80, 0.06);
+}
+
+.services table th {
+  background: #263779;
+  color: white;
+  padding: 16px;
+}
+
+.services table td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.services table tbody tr:hover {
+  background: #f0f2ff;
+}
+
+/* SERVICES LISTS */
+.services ul,
+.services ol {
+  line-height: 2;
+  padding-left: 25px;
+}
+
+.services ul li::marker {
+  color: #5865d8;
+}
+
+/* MEDIA CONTENT */
+.services video {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  background: #172554;
+  box-shadow: 0 6px 20px rgba(30, 41, 80, 0.12);
+}
+
+.services iframe {
+  border-radius: 14px;
+}
+
+.services audio {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.services .row h3 {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+/* CONTACT SECTION */
+.contact .info-item {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(30, 41, 80, 0.06);
+  transition: 0.3s;
+}
+
+.contact .info-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact .info-item i {
+  background: #eef0ff;
+  color: #5865d8;
+  border-radius: 50%;
+}
+
+/* FOOTER */
+.footer {
+  background: #172554;
+  color: white;
+  padding: 35px 0;
+}
+
+.footer h3,
+.footer p {
+  color: white;
+}
+
+.footer .social-links a {
+  background: #5865d8;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+  section {
+    padding: 55px 0;
+  }
+
+  #hero h2 {
+    font-size: 38px;
+  }
+
+  #hero p {
+    font-size: 18px;
+  }
+
+  .about .content {
+    padding: 20px;
+  }
+
+  .portfolio .portfolio-content img {
+    height: 220px;
+  }
+
+}
