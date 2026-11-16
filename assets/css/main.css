@@ -1941,3 +1941,416 @@ section {
   }
 
 }
+/*
+ * Custom stylesheet for the CV website
+ * Loaded after main.css so these rules override the template defaults.
+ */
+
+/* --------------------------------------------------
+   1. Typography and colour palette
+-------------------------------------------------- */
+:root {
+  --custom-ink: #203047;
+  --custom-muted: #526477;
+  --custom-accent: #176b68;
+  --custom-accent-dark: #10514f;
+  --custom-soft: #edf5f3;
+  --custom-border: #d5e3e0;
+  --custom-card: #ffffff;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: var(--custom-ink);
+  background-color: #fbfdfd;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", "Segoe UI", sans-serif;
+  color: #173b4a;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; }
+h3 { font-size: 1.55rem; font-weight: 750; }
+h4 { font-size: 1.2rem; font-weight: 700; }
+h5 { font-size: 1rem; font-weight: 650; }
+h6 { font-size: 0.9rem; font-weight: 650; }
+
+p {
+  color: var(--custom-muted);
+  font-size: 0.98rem;
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------
+   2. Links and buttons
+-------------------------------------------------- */
+a {
+  color: var(--custom-accent);
+  text-decoration: none;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease,
+              transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a:hover {
+  color: var(--custom-accent-dark);
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e0a72e;
+  outline-offset: 3px;
+}
+
+button,
+.php-email-form button,
+a.btn {
+  background: var(--custom-accent);
+  color: #ffffff;
+  border: 2px solid var(--custom-accent);
+  border-radius: 10px;
+  padding: 11px 22px;
+  font: 600 0.95rem "Poppins", sans-serif;
+  box-shadow: 0 5px 14px rgba(23, 107, 104, 0.18);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+button:hover,
+.php-email-form button:hover,
+a.btn:hover {
+  background: var(--custom-accent-dark);
+  border-color: var(--custom-accent-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(23, 107, 104, 0.25);
+}
+
+button:active,
+.php-email-form button:active,
+a.btn:active {
+  background: #0b4140;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(23, 107, 104, 0.2);
+}
+
+/* --------------------------------------------------
+   3. Section spacing and content blocks (About,
+      Resume and Portfolio)
+-------------------------------------------------- */
+#about.section,
+#resume.section,
+#portfolio.section {
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+
+#about .section-title,
+#resume .section-title,
+#portfolio .section-title {
+  margin-bottom: 12px;
+  padding-bottom: 34px;
+}
+
+#about .content {
+  padding: 28px 32px;
+  background: var(--custom-card);
+  border: 1px solid var(--custom-border);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(32, 48, 71, 0.07);
+}
+
+#about .profile-photo {
+  display: block;
+  border: 6px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(32, 48, 71, 0.16);
+}
+
+#about .content ul {
+  margin: 14px 0;
+  padding: 16px 18px;
+  background: var(--custom-soft);
+  border: 1px solid var(--custom-border);
+  border-radius: 12px;
+}
+
+#about .content ul li {
+  margin-bottom: 12px;
+  line-height: 1.55;
+}
+
+#resume .resume-title {
+  margin: 28px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--custom-border);
+  color: #173b4a;
+}
+
+#resume .resume-item {
+  margin: 0 0 22px;
+  padding: 20px 22px 18px 25px;
+  background: var(--custom-card);
+  border: 1px solid var(--custom-border);
+  border-left: 4px solid var(--custom-accent);
+  border-radius: 0 14px 14px 0;
+  box-shadow: 0 7px 20px rgba(32, 48, 71, 0.06);
+}
+
+#resume .resume-item::before {
+  left: -10px;
+  top: 22px;
+  width: 14px;
+  height: 14px;
+  background: var(--custom-accent);
+  border: 3px solid #ffffff;
+}
+
+#resume .resume-item h4 {
+  color: #173b4a;
+  line-height: 1.4;
+}
+
+#resume .resume-item h5 {
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: var(--custom-soft);
+  color: var(--custom-accent-dark);
+}
+
+#portfolio .row {
+  row-gap: 28px;
+}
+
+#portfolio .portfolio-content {
+  padding: 16px;
+  background: var(--custom-card);
+  border: 1px solid var(--custom-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(32, 48, 71, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#portfolio .portfolio-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(32, 48, 71, 0.13);
+}
+
+#portfolio .portfolio-content img {
+  border-radius: 11px;
+  margin-bottom: 16px;
+}
+
+#portfolio .portfolio-content h4 {
+  margin: 8px 0 10px;
+  color: var(--custom-accent-dark);
+}
+
+#portfolio .portfolio-content p {
+  margin-bottom: 4px;
+}
+
+/* --------------------------------------------------
+   4. Two additional components:
+      A) navigation menu
+      B) skills progress bars
+-------------------------------------------------- */
+/* A. Navigation menu: change background, shape, spacing,
+      border and shadow without changing link typography. */
+#header .navmenu a,
+#header .navmenu a:focus {
+  background: #e7f0ef;
+  border: 1px solid #c7dcd8;
+  border-radius: 14px;
+  margin-bottom: 11px;
+  padding: 12px 17px;
+  box-shadow: 0 3px 9px rgba(23, 59, 74, 0.06);
+}
+
+#header .navmenu a:hover,
+#header .navmenu .active,
+#header .navmenu .active:focus,
+#header .navmenu li:hover > a {
+  background: #173b4a;
+  border-color: #173b4a;
+  box-shadow: 0 6px 15px rgba(23, 59, 74, 0.2);
+}
+
+/* B. Skills progress bars: change track, fill, height,
+      radius and shadow. */
+#skills .progress {
+  height: auto;
+  margin-bottom: 22px;
+}
+
+#skills .progress-bar-wrap {
+  height: 13px;
+  overflow: hidden;
+  border: 1px solid #c7dcd8;
+  border-radius: 20px;
+  background: #e7f0ef;
+}
+
+#skills .progress-bar {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #176b68, #53a69a);
+  box-shadow: 0 2px 7px rgba(23, 107, 104, 0.25);
+}
+
+/* --------------------------------------------------
+   5. Laboratory Work 8 lists
+-------------------------------------------------- */
+/* Unordered list: custom circular markers via pseudo-element. */
+#services .row.mt-4 > div > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#services .row.mt-4 > div > ul > li {
+  position: relative;
+  margin: 9px 0;
+  padding: 10px 14px 10px 38px;
+  border: 1px solid var(--custom-border);
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+#services .row.mt-4 > div > ul > li::before {
+  content: "✦";
+  position: absolute;
+  left: 14px;
+  color: var(--custom-accent);
+  font-weight: 800;
+}
+
+/* Nested unordered list has its own inset panel and marker. */
+#services .row.mt-4 > div > ul > li > ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 8px 12px 8px 22px;
+  border-left: 3px solid #8bbdb4;
+  border-radius: 0 8px 8px 0;
+  background: var(--custom-soft);
+}
+
+#services .row.mt-4 > div > ul > li > ul > li {
+  position: relative;
+  padding: 4px 0 4px 18px;
+  color: var(--custom-muted);
+}
+
+#services .row.mt-4 > div > ul > li > ul > li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--custom-accent-dark);
+  font-weight: 800;
+}
+
+/* Ordered list: CSS counter creates numbered badges. */
+#services .row.mt-4 > div > ol {
+  list-style: none;
+  counter-reset: lab-steps;
+  padding-left: 0;
+}
+
+#services .row.mt-4 > div > ol > li {
+  counter-increment: lab-steps;
+  position: relative;
+  margin: 9px 0;
+  padding: 11px 14px 11px 48px;
+  border: 1px solid var(--custom-border);
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+#services .row.mt-4 > div > ol > li::before {
+  content: counter(lab-steps);
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--custom-accent);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------
+   6. Laboratory Work 8 table
+-------------------------------------------------- */
+#services table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid var(--custom-border);
+  border-radius: 12px;
+  box-shadow: 0 7px 20px rgba(32, 48, 71, 0.06);
+}
+
+#services table th,
+#services table td {
+  padding: 13px 16px;
+  text-align: center;
+  vertical-align: middle;
+  border-color: var(--custom-border);
+}
+
+#services table thead th {
+  background: #173b4a;
+  color: #ffffff;
+  font-weight: 700;
+  border-color: #315968;
+}
+
+#services table tbody tr:nth-child(even) {
+  background: #edf5f3;
+}
+
+#services table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+#services table tbody tr:hover {
+  background: #dcece8;
+}
+
+/* Small-screen spacing */
+@media (max-width: 767px) {
+  #about.section,
+  #resume.section,
+  #portfolio.section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  #about .content {
+    margin-top: 12px;
+    padding: 20px;
+  }
+
+  #resume .resume-item {
+    padding: 17px 16px 15px 20px;
+  }
+
+  #services table th,
+  #services table td {
+    padding: 9px 7px;
+    font-size: 0.88rem;
+  }
+}
